@@ -1,15 +1,15 @@
 interface useAuthProps {
-  signedIn: boolean | null;
+  signedIn: boolean | null
 }
 
-export function NhostAuthProvider(auth: any): JSX.Element;
-export function NhostApolloProvider(
+export function NhostAuthProvider(auth: any): JSX.Element
+export function NhostURqlProvider(
   auth: any,
   gqlEndpoint: string,
   headers?: {
-    [key: string]: any;
+    [key: string]: any
   },
   publicRole?: string
-): JSX.Element;
+): JSX.Element
 
-export function useAuth(): useAuthProps;
+export function useAuth(): useAuthProps
