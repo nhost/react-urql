@@ -26,8 +26,6 @@ export function generateUrqlClient(
       const token = auth.getJWTToken()
       const refreshToken = !ssr && localStorage.getItem('refresh_token')
       if (token && refreshToken) {
-        console.log('getAuth -> token', token)
-        console.log('getAuth -> refreshToken', refreshToken)
         return { token, refreshToken }
       }
       return null
