@@ -68,7 +68,6 @@ export function generateUrqlClient(
   const didAuthError = ({ error }) => {
     return error.graphQLErrors.some((e) => e.extensions?.code === 'FORBIDDEN')
   }
-  // const ssr = typeof window === 'undefined'
   const uri = gqlEndpoint
 
   const wsUri = uri.startsWith('https')
@@ -116,26 +115,6 @@ export function generateUrqlClient(
 export function NhostUrqlProvider(props) {
   const { auth, gqlEndpoint, publicRole = 'public', children } = props
   const client = generateUrqlClient(auth, gqlEndpoint, publicRole)
-  // i think this is no longer needed.
-
-  //   if (props.auth) {
-  //     this.props.auth.onTokenChanged(() => {
-  //       if (this.wsLink.subscriptionClient.status === 1) {
-  //         this.wsLink.subscriptionClient.tryReconnect()
-  //       }
-  //     })
-
-  //     this.props.auth.onAuthStateChanged((data) => {
-  //       // reconnect ws connection with new auth headers for the logged in/out user
-  //       if (this.wsLink.subscriptionClient.status === 1) {
-  //         // must close first to avoid race conditions
-  //         this.wsLink.subscriptionClient.close()
-  //         // reconnect
-  //         this.wsLink.subscriptionClient.tryReconnect()
-  //       }
-  //     })
-  //   }
-  // }
 
   return <Provider value={client}>{children}</Provider>
 }

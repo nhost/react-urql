@@ -1,5 +1,5 @@
 {
-  "name": "react-urql-nhost",
+  "name": "react-urql",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nhost/react-urql-nhost.git"
+    "url": "git+https://github.com/nhost/react-urql.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nhost/react-urql-nhost/issues"
+    "url": "https://github.com/nhost/react-urql/issues"
   },
-  "homepage": "https://github.com/nhost/react-urql-nhost#readme",
+  "homepage": "https://github.com/nhost/react-urql#readme",
   "devDependencies": {
     "@babel/cli": "^7.10.4",
     "@babel/core": "^7.10.4",
