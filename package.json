@@ -1,36 +1,40 @@
 {
   "name": "react-urql",
   "version": "1.0.0",
-  "description": "",
+  "description": "Nhost React URQL client",
+  "license": "MIT",
+  "keywords": [
+    "nhost",
+    "hasura",
+    "storage",
+    "auth",
+    "authentication",
+    "graphql",
+    "postgresql",
+    "realtime",
+    "react",
+    "urql"
+  ],
+  "author": "Nhost",
+  "homepage": "https://nhost.io",
+  "bugs": "https://github.com/nhost/react-urql/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhost/react-urql.git"
+  },
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
     "./dist"
   ],
+  "np": {
+    "yarn": true,
+    "contents": "/dist"
+  },
   "scripts": {
     "dev": "./node_modules/.bin/babel src -w -d dist",
     "build": "./node_modules/.bin/babel src -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nhost/react-urql.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nhost/react-urql/issues"
-  },
-  "homepage": "https://github.com/nhost/react-urql#readme",
-  "devDependencies": {
-    "@babel/cli": "^7.10.4",
-    "@babel/core": "^7.10.4",
-    "@babel/preset-env": "^7.10.4",
-    "@babel/preset-react": "^7.10.4"
-  },
-  "peerDependencies": {
-    "react": "^16.6.1",
-    "react-dom": "^16.6.3"
   },
   "dependencies": {
     "@urql/exchange-auth": "^0.1.0",
@@ -41,8 +45,14 @@
     "subscriptions-transport-ws": "^0.9.17",
     "urql": "^1.10.1"
   },
-  "np": {
-    "yarn": true,
-    "contents": "/dist"
+  "peerDependencies": {
+    "react": "^16.6.1",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.4",
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4"
   }
 }
